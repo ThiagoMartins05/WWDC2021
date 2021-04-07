@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>My Playground</string>
-	<key>LiveViewEdgeToEdge</key>
-	<false/>
-	<key>LiveViewMode</key>
-	<string>HiddenByDefault</string>
+	<string>Creating AI</string>
+	<key>InitialUserPages</key>
+	<array>
+		<string>page1.playgroundpage</string>
+	</array>
 </dict>
 </plist>
