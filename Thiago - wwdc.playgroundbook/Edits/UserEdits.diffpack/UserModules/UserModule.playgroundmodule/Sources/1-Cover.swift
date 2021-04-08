@@ -2,8 +2,7 @@
 import PlaygroundSupport
 import SpriteKit
 import Foundation
-import UIKit
-import AVFoundation
+
 
 public func Start(){
     class myScene: SKScene{
@@ -48,27 +47,15 @@ public func Start(){
             let label = SKLabelNode()//(fontNamed: "Chalkduster")
             label.fontSize = 60
             label.fontColor = SKColor.cyan
-            label.text = ""
             label.preferredMaxLayoutWidth = 330
             label.numberOfLines = 0
             label.verticalAlignmentMode = .center
-            typeText(label: label)
+            var texto = "The age of A.I."
             self.addChild(label)
-            
+            typeText(label: label, text: texto, timeForLetter: 0.15)
         }
         
-        func typeText( label: SKLabelNode){
-            var texto = "The age of A.I."
-            var j : Double = 1.0
-            for i in texto{
-                DispatchQueue.main.asyncAfter(deadline: .now() + (j*2)/10){
-                    label.text! += "\(i)"
-                    RunLoop.current.run(until: Date()+0.2)
-                    j += 1
-                    AudioServicesPlaySystemSound(1306)
-                }
-            }
-        }
+        
         
         func addAnimatedCircles(){
             

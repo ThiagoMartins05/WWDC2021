@@ -14,11 +14,14 @@
 //I tryed to explain it in a glower way,
 //Hope you enjoy it!
 
-Start()
+//Start()
+//AboutAI()
+ExamplesOfAI()
+
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 443}</string>
+			<string>{1, 473}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
