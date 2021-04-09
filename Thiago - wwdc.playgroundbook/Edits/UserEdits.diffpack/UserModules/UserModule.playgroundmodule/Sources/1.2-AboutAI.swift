@@ -52,13 +52,14 @@ public func AboutAI(){
 //              rec.color = .red
 //              self.addChild(rec)
             
-            let label = SKLabelNode()
+            let label = SKLabelNode()//fontNamed: "Tenby Five")
             //label.frame.height = 
+            label.verticalAlignmentMode = .center
             label.numberOfLines = 0
             label.preferredMaxLayoutWidth = 400
-            label.position.y = 180
+            label.position.y = 220
             
-            let text = "thiago da silva martins e um ios develper no apple developer academy"
+            let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
             
             self.addChild(label)
             

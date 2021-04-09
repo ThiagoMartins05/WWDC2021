@@ -22,15 +22,27 @@
 			</dict>
 			<dict>
 				<key>File</key>
-				<string>UserModules/UserModule.playgroundmodule/Sources/1-AboutAI.swift</string>
+				<string>Chapters/Chapter2.playgroundchapter/Pages/page1.playgroundpage/UserManifest.plist</string>
 			</dict>
 			<dict>
 				<key>File</key>
-				<string>UserModules/UserModule.playgroundmodule/Sources/1-Cover.swift</string>
+				<string>UserModules/UserModule.playgroundmodule/Sources/1.1-Cover.swift</string>
 			</dict>
 			<dict>
 				<key>File</key>
-				<string>UserModules/UserModule.playgroundmodule/Sources/1 - ExamplesOfAI.swift</string>
+				<string>UserModules/UserModule.playgroundmodule/Sources/1.2-AboutAI.swift</string>
+			</dict>
+			<dict>
+				<key>File</key>
+				<string>UserModules/UserModule.playgroundmodule/Sources/1.3-ExamplesOfAI.swift</string>
+			</dict>
+			<dict>
+				<key>File</key>
+				<string>UserModules/UserModule.playgroundmodule/Sources/2.1 - Training AI.swift</string>
+			</dict>
+			<dict>
+				<key>File</key>
+				<string>UserModules/UserModule.playgroundmodule/Sources/Object.swift</string>
 			</dict>
 		</array>
 		<key>Modified</key>
@@ -46,6 +58,12 @@
 				<string>UserModules/UserModule.playgroundmodule/Sources/SharedCode.swift.delta</string>
 				<key>File</key>
 				<string>UserModules/UserModule.playgroundmodule/Sources/SharedCode.swift</string>
+			</dict>
+			<dict>
+				<key>Diff</key>
+				<string>Chapters/Chapter2.playgroundchapter/Pages/page1.playgroundpage/main.swift.delta</string>
+				<key>File</key>
+				<string>Chapters/Chapter2.playgroundchapter/Pages/page1.playgroundpage/main.swift</string>
 			</dict>
 		</array>
 		<key>Removed</key>

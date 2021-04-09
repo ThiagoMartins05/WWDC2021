@@ -13,15 +13,14 @@
 
 //I tryed to explain it in a glower way,
 //Hope you enjoy it!
-
 //Start()
 //AboutAI()
-ExamplesOfAI()
+//ExamplesOfAI()
 
-
+TraineAI()
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 473}</string>
+			<string>{1, 484}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

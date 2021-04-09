@@ -44,12 +44,13 @@ public func Start(){
         
         
         func addText(){
-            let label = SKLabelNode()//(fontNamed: "Chalkduster")
+            let label = SKLabelNode(fontNamed: "Tough Love")
             label.fontSize = 60
             label.fontColor = SKColor.cyan
             label.preferredMaxLayoutWidth = 330
             label.numberOfLines = 0
             label.verticalAlignmentMode = .center
+            label.horizontalAlignmentMode = .center
             var texto = "The age of A.I."
             self.addChild(label)
             typeText(label: label, text: texto, timeForLetter: 0.15)
