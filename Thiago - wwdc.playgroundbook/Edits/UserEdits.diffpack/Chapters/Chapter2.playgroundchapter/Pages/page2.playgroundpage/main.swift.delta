@@ -9,11 +9,12 @@
 			<string>
 DefineCommands()
 
-    //Robô muda pra um robo com check na cabeça
+    //Now that our roubot knows the objects that it must recognize, We have to teach it what to do when it finds a object
+    //You can help him to learn connecting the right objects to the right functions
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 68}</string>
+			<string>{1, 226}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

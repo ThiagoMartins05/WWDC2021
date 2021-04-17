@@ -7,23 +7,17 @@
 		<dict>
 			<key>ModifiedContent</key>
 			<string>//Welcome to (playgroundName)
-//Technology is everywhere... and we are living in a moment that it helps us to get connected with other people and also it cans facilitate our day to day life.
 
-//But... how? For me, one of the most fascinating mechanisms used in the technology field is Artificial Intelligence (AI), that's what we are going to explore in this playground
+//The world is envolving faster than we can see.
+
+//For me, one of the most fascinating mechanisms used in the technology field is Artificial Intelligence (AI), that's what we are going to explore in this playground
 
 //I tryed to explain it in a glower way,
 //Hope you enjoy it!
 Start()
-
-//AboutAI()
-//ExamplesOfAI()
-
-
-//TraineAI()
-DefineCommands()
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 503}</string>
+			<string>{1, 318}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

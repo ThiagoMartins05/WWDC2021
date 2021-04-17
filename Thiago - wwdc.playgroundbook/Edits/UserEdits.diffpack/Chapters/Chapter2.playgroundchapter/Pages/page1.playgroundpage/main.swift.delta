@@ -9,10 +9,17 @@
 			<string>//citar o framework da apple
 //Now that we
 TraineAI()
+/*-------------------------------------------------------------------------------
+ Now that we know what is an A.I., we can try to create ours!
+ Let's create a robot A.I. based, that helps apple farmers
+ 
+ The firs step is to train it,
+ so, you must teach it what it must recognize(apples and bugs), and what it must ignore(flowers and leaves), we call the ignored objects Negatives
+ -------------------------------------------------------------------------------*/
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 55}</string>
+			<string>{1, 521}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

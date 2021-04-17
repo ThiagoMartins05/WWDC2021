@@ -30,6 +30,10 @@ public class DragableNode: SKNode {
         self.isUserInteractionEnabled = true
     }
     
+    func addChildNode(node: SKNode){
+        self.addChild(node)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

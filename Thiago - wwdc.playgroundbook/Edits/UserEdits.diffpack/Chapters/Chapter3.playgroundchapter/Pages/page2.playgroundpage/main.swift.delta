@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>
+/*-------------------------------------------------------------------------------
+ 
+ This was my submission for WWDC 2021, thanks for your attention!
+ 
+ 
+ I love to learn more about the technology Universe. But my greatest 
+ passion is to use my cretivity to express what I've learned, so that is why I decided to make this Playground.
+ 
+ I hope you have enjoyed to play this so much as I enjoyed making it ❤️.
+ 
+ Sincerely,
+ Thiago Martins
+ 
+ ------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------
+ Credits
+ 
+ i used a amazing custom font that's a 100% free for personal and cormmercial use, you can find it at here: https://www.dafont.com/pt/tough-love.font?l[]=10&amp;l[]=1
+ ------------------------------------------------------------------------------*/
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 865}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter3.playgroundchapter/Pages/page2.playgroundpage/main.swift</string>
+</dict>
+</plist>
