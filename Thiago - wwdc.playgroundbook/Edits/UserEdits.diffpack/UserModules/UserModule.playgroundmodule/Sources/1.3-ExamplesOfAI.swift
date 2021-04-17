@@ -3,63 +3,191 @@ import PlaygroundSupport
 import SpriteKit
 import Foundation
 
-public func ExamplesOfAI(){
+
     class exampleScene:SKScene{
-        let baloon = SKSpriteNode(imageNamed:"balao_de_fala_2")
-        let florest = SKSpriteNode(imageNamed:"threes")
-        let health = SKSpriteNode(imageNamed:"health")
-        let car = SKSpriteNode(imageNamed:"car")
-        let photos = SKSpriteNode(imageNamed:"photos")
+        
+        var currentText = [String]()
+        var textIndex = 0
+        
+        let baloon = Object(image: "balao_de_fala_2", Y: 230)
+        
+        let label = SKLabelNode()
+        var firstTime = true
+        //var isReading = true
+        
+        let nextPageBtn = Button(image: "nextPage", Y: -300)
+        
+        let continueBtn = Button(image: "continueBtn", X: 130, Y: 145)
         
         override func sceneDidLoad() {
+            
+            let florest = Button(image: "trees", action: {self.applesAction()}, scale: 0.5,X: -115, Y: 20)
+            let health = Button(image: "health", action: {self.healthAction()}, scale: (0.5), X: 115, Y: 20)
+            let car = Button(image: "car",action: {self.carsAction()}, scale: 0.5, X: 115, Y: -165)
+            let gps = Button(image: "gps",action: {self.gpsAction()}, scale: 0.5, X: -115, Y: -165)
+            
             self.backgroundColor = .black
             self.anchorPoint = .init(x: 0.5, y: 0.5)
             self.scaleMode = .aspectFit
             
-            baloon.setScale(0.55)
-            baloon.position.y = 230
-            self.addChild(baloon)
-            
-            florest.setScale(0.5)
-            florest.position.x = -115
-            florest.position.y = 10
-            florest.name = "florest"
+            self.addChild(baloon.generateNode())
             self.addChild(florest)
-            
-            health.setScale(0.5)
-            health.position.x = 115
-            health.position.y = 10
-            health.name = "health"
             self.addChild(health)
-            
-            photos.setScale(0.5)
-            photos.position.x = -115
-            photos.position.y = -180
-            photos.name = "photos"
-            self.addChild(photos)
-            
-            car.setScale(0.5)
-            car.position.x = 115
-            car.position.y = -180
-            car.name = "car"
+            self.addChild(gps)
             self.addChild(car)
             
-        }
-        
-        
-        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            let touch = touches.first
-            let positionInScene = touch!.location(in: self)
-            let touchedNode = self.atPoint(positionInScene)
+            label.position.y = 200
+            label.preferredMaxLayoutWidth = 400
+            label.numberOfLines = 3
+            label.text = "1 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidun"
             
-            if let name = touchedNode.name{
-                //print(name)
+            self.addChild(label)
+            self.addChild(continueBtn)
+            let acao = { [self] in
+                continueText()
             }
+            
+            self.addChild(nextPageBtn)
+            continueBtn.acao =  acao
+            continueBtn.isHidden = true
+            nextPageBtn.isHidden = true
+            nextPageBtn.acao = {goToNextPage()}
+        }
+        
+        func healthAction(){
+            textIndex = 0
+            continueBtn.isHidden = false
+            var healthText = [
+                "In self care, AI can be a key for early diagnosis of some diseases,...", "...and even discover new medicines"
+            ]
+            //isReading = true
+            
+            
+            if firstTime {
+                healthText = FirstTime(text: healthText)
+            }
+            currentText = healthText
+            
+            continueText()
+            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
+            //textIndex = 1
         }
         
         
+        
+        func gpsAction(){
+            textIndex = 0
+            continueBtn.isHidden = false
+            //isReading = true
+            var gpsText = [
+                "On the gps, AI can be used to find the shortest route to your destination"
+                //"It's also used to find a restaurant next to you, for example"
+            ]
+            
+            
+            if firstTime {
+                gpsText = FirstTime(text: gpsText)
+            }
+            currentText = gpsText
+            
+            continueText()
+            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
+            //textIndex = 1
+        }
+        
+        
+        func applesAction(){
+            textIndex = 0
+            continueBtn.isHidden = false
+            //isReading = true
+            var applesText = [
+                "On farms, AI can be used to inspect the fruits health based on its color, size and format", 
+                "It also cans stipulate when the fruit will be ripe, and detect bugs"
+            ]
+            
+            
+            if firstTime {
+                applesText = FirstTime(text: applesText)
+            }
+            currentText = applesText
+            
+            continueText()
+            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
+            //textIndex = 1
+            }
+        
+        
+        func carsAction(){
+            textIndex = 0
+            
+            //isReading = true
+            var carsText = [
+            "On the automation, AI can be used in autonomous vehicles"
+            ]
+            if firstTime {
+                carsText = FirstTime(text: carsText)
+            }
+            
+            currentText = carsText
+            
+            continueText()
+            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
+            //continueBtn.isHidden = false
+            textIndex = 1
+        }
+        
+        func FirstTime(text: [String]) -> [String]{
+            let text = ["You are right!"] + text + 
+                ["But... Surprise! AI can also be used in the others situations...",
+                 "...you can explore it, clicking on different images, or go to the next page"]
+            firstTime = false
+            return text
+        }
+        
+        
+        func continueText(){
+            //if isReading{
+                if currentText.count > textIndex{
+                    typeText(label: label, text: currentText[textIndex], timeForLetter: 0.08)
+                    textIndex += 1
+                    nextPageBtn.isHidden = true
+                    continueBtn.isHidden = true
+                    
+                    
+                    if currentText.count != (textIndex){
+                        DispatchQueue.main.asyncAfter(deadline: .now() + (Double(currentText[textIndex-1].count)*0.08)) { [self] in
+                            continueBtn.isHidden = false
+                        }
+                    }
+                    
+                    
+                    print(currentText.count)
+                    print(textIndex)
+                    
+                }
+            
+            
+                
+                
+                
+                if (currentText.count) == textIndex {
+                    textIndex = 0
+                    //isReading = false
+                    continueBtn.isHidden = true
+                    nextPageBtn.isHidden = false
+                }
+            }
+            
+        //}
         
     }
+
+
+
+
+
+
+public func ExamplesOfAI(){
     
     var view = SKView(frame: CGRect(origin: .zero, size: CGSize(width: 518, height: 717)))
     

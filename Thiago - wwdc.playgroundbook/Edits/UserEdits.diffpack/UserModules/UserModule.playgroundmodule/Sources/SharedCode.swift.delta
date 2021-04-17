@@ -11,7 +11,6 @@ import PlaygroundSupport
 import SpriteKit
 import Foundation
 
-
 func typeText( label: SKLabelNode, text: String, timeForLetter: Double){
     label.text = ""
     var j : Double = 1.0
@@ -25,46 +24,13 @@ func typeText( label: SKLabelNode, text: String, timeForLetter: Double){
     }
 }
 
+func goToNextPage(){
+    PlaygroundPage.current.navigateTo(page: .next)
+}
 
-//  func typeCenteredText( label: SKLabelNode, text: String, timeForLetter: Double){
-//      label.text = ""
-//      var j : Double = 1.0
-//      
-//      let attrString = NSMutableAttributedString(string: text)
-//      let paragraphStyle = NSMutableParagraphStyle()
-//      paragraphStyle.alignment = .center
-//      let range = NSRange(location: 0, length: text.count)
-//      attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
-//      
-//      attrString.addAttributes([NSAttributedString.Key.foregroundColor : UIColor.cyan, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 60)], range: range)
-//      
-//      label.attributedText = attrString
-//      
-//      
-//      for i in 0 ... attrString.string.count{
-//          DispatchQueue.main.asyncAfter(deadline: .now() + (j*2)/100){
-//              label.horizontalAlignmentMode = .center
-//              label.text! += "\(i)"
-//              RunLoop.current.run(until: Date()+timeForLetter)
-//              j += 1
-//          }
-//      }
-//  }
-
-
-//  var texto = "The age of A.I. iiasdisaidjsadi  kLSmaklsmAKS "
-//  
-//  let attrString = NSMutableAttributedString(string: texto)
-//  let paragraphStyle = NSMutableParagraphStyle()
-//  paragraphStyle.alignment = .center
-//  let range = NSRange(location: 0, length: texto.count)
-//  attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
-//  attrString.addAttributes([NSAttributedString.Key.foregroundColor : UIColor.cyan, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 60)], range: range)
-//  label.attributedText = attrString
-//  self.addChild(label)
 </string>
 			<key>ModifiedRange</key>
-			<string>{75, 2120}</string>
+			<string>{75, 528}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

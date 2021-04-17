@@ -6,8 +6,9 @@ import Foundation
 
 public func Start(){
     class myScene: SKScene{
+        
         let capaInicio = SKSpriteNode(imageNamed: "background-1")
-        let startButton = SKSpriteNode(imageNamed: "startButton")
+        //let startButton = SKSpriteNode(imageNamed: "startButton")
         let outerCircle = SKSpriteNode(imageNamed: "outerCircle")
         let innerCircle = SKSpriteNode(imageNamed: "innerCircle")
         
@@ -16,7 +17,7 @@ public func Start(){
             addBackground(image: capaInicio, scale: 0.54, scene: self)
             
             addAnimatedCircles()
-            addStartButton(image: startButton, scale: 0.58, scene: self)
+            addStartButton(image: "startButton", scene: self)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                 self.addText()
             }
@@ -24,28 +25,9 @@ public func Start(){
             
         }
         
-        
-        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            let touch = touches.first
-            let positionInScene = touch!.location(in: self)
-            let touchedNode = self.atPoint(positionInScene)
-            
-            if let name = touchedNode.name{
-                if name == "start"{
-                    AboutAI()
-                    
-                    for child in self.children{
-                        child.removeFromParent()
-                    }
-                    
-                }
-            }
-        }
-        
-        
         func addText(){
             let label = SKLabelNode(fontNamed: "Tough Love")
-            label.fontSize = 60
+            label.fontSize = 50
             label.fontColor = SKColor.cyan
             label.preferredMaxLayoutWidth = 330
             label.numberOfLines = 0
@@ -82,13 +64,17 @@ public func Start(){
         scene.addChild(image)
     }
     
-    func addStartButton(image: SKSpriteNode,scale:CGFloat, scene:SKScene){
-        let startButton = image
-        startButton.setScale(scale)
-        startButton.position.y = -250
+    func addStartButton(image: String, scene:SKScene){
+        
+        let action = {
+            goToNextPage()
+        }
+        let startButton = Button(image: image, action: action, Y: -250)
         scene.addChild(startButton)
-        startButton.name = "start"
     }
+    
+    
+    
     
     func makeRotateForever(for node: SKSpriteNode, for duration: TimeInterval, clockwise: Bool){
         if clockwise{
@@ -110,3 +96,4 @@ public func Start(){
     view.presentScene(scene)
     PlaygroundPage.current.setLiveView(view)
 }
+

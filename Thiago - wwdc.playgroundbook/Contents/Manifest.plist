@@ -7,10 +7,10 @@
 		<string>Chapter1.playgroundchapter</string>
 		<string>Chapter2.playgroundchapter</string>
 	</array>
-	<key>ContentIdentifier</key>
-	<string>com.apple.thiago.artificialInteligence</string>
 	<key>ImageReference</key>
 	<string>playgroundCover.png</string>
+	<key>ContentIdentifier</key>
+	<string>com.apple.thiago.artificialInteligence</string>
 	<key>ContentVersion</key>
 	<string>1.0</string>
 	<key>DeploymentTarget</key>

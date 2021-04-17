@@ -3,11 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Creating AI</string>
-	<key>InitialUserPages</key>
-	<array>
-		<string>page1.playgroundpage</string>
-		<string>page2.playgroundpage</string>
-	</array>
+	<string>Commands</string>
 </dict>
 </plist>

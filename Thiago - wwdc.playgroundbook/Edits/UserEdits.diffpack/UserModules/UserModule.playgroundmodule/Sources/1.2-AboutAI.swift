@@ -3,8 +3,15 @@ import SpriteKit
 import Foundation
 
 public func AboutAI(){
+    
+    
     class aboutScene:SKScene{
+        
+        var i = 0
+        
+        var firstTime = true
         let robot = SKSpriteNode(imageNamed: "robo_que_fala")
+        var label = SKLabelNode()
         let baloon = SKSpriteNode(imageNamed: "balao_de_fala_1")
         let mouth = SKSpriteNode(imageNamed: "boca_robo")
         let eye = SKSpriteNode(imageNamed: "olho_robo")
@@ -12,7 +19,6 @@ public func AboutAI(){
         
         override func sceneDidLoad() {
             self.backgroundColor = .black
-            
             self.anchorPoint = .init(x: 0.5, y: 0.5)
             self.scaleMode = .aspectFit
             
@@ -31,7 +37,9 @@ public func AboutAI(){
             baloon.setScale(0.55)
             baloon.position.y = 160
             self.addChild(baloon)
-
+            
+            addContinueButton(in: self)
+            
             eye.run(.repeatForever(.sequence([
                 .move(to: .init(x: -63, y: -68), duration: 2),
                 .move(to: .init(x: 63, y: -68), duration: 2)
@@ -46,14 +54,9 @@ public func AboutAI(){
             mouth.position.y = -108
             self.addChild(mouth)
             
-//              let rec = SKSpriteNode()
-//              rec.size = CGSize(width:CGFloat(400),height:CGFloat(190))
-//              rec.position.y = 210
-//              rec.color = .red
-//              self.addChild(rec)
+
             
-            let label = SKLabelNode()//fontNamed: "Tenby Five")
-            //label.frame.height = 
+            
             label.verticalAlignmentMode = .center
             label.numberOfLines = 0
             label.preferredMaxLayoutWidth = 400
@@ -67,6 +70,33 @@ public func AboutAI(){
             
             
         }
+        
+        
+        
+        
+        func addContinueButton(in scene: SKScene){
+            let acao = { [self] in
+                continueText()
+            }
+            let continueBtn = Button(image: "continueBtn", action: acao, X: 130, Y: 125)
+            scene.addChild(continueBtn)
+        }
+        
+        func continueText(){
+            
+            let text = ["1 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidunt", " 2 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidunt", "3 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidunt"]
+            if text.count > i{
+                typeText(label: label, text: text[i], timeForLetter: 0.1)
+                i += 1
+            }
+            
+            if text.count == i {
+                ExamplesOfAI()
+            }
+            
+            
+        }
+        
         
     } 
     
