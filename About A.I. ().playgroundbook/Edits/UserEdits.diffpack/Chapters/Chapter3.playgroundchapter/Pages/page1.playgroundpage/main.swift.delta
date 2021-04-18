@@ -8,13 +8,15 @@
 			<key>ModifiedContent</key>
 			<string>//TESTING OUR A.I.
 
-//Now, its time to see if the robot that we crated, is working
+//Now that we understand the usage and the basic process of creating an A.I., let test the robot that we just created
+//we will get out of our lab, and explore a apple farm
+//Its time to see if the robot that we crated, is working
 
-//Use the magnifier on the robot's hand to count all the apples, and remove all the bugs
+//Feel free to use the magnifier on the robot's hand to count all the apples, and remove all the bugs
 testAI()
 </string>
 			<key>ModifiedRange</key>
-			<string>{0, 182}</string>
+			<string>{0, 363}</string>
 			<key>OriginalContent</key>
 			<string>
 </string>

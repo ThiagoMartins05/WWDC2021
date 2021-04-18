@@ -55,18 +55,21 @@ public func AboutAI(){
             self.addChild(mouth)
             
 
-            
+            let font = #fileLiteral(resourceName: "Tough Love.ttf")
+            CTFontManagerRegisterFontsForURL(font as CFURL, CTFontManagerScope.process, nil)
+            label.fontName = "Tough Love"
+            //let label = SKLabelNode(fontNamed: "Tough Love")
             
             label.verticalAlignmentMode = .center
             label.numberOfLines = 0
             label.preferredMaxLayoutWidth = 400
             label.position.y = 220
             
-            let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            
             
             self.addChild(label)
             
-            typeText(label: label, text: text, timeForLetter: 0.1)
+            continueText()
             
             
         }
@@ -84,13 +87,20 @@ public func AboutAI(){
         
         func continueText(){
             
-            let text = ["1 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidunt", " 2 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidunt", "3 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidunt"]
+            
+            
+            let text = [
+                "Artificial intelligence is a branch of computer science that build systems and machines...",
+                "that try to replicate the human intelligence, so it can understand, think and learn...", 
+                "...to make some processes, just like a human does",
+                "A.I. can be found in a big range of functions..."]
+            
             if text.count > i{
                 typeText(label: label, text: text[i], timeForLetter: 0.1)
-                i += 1
             }
+            i += 1
             
-            if text.count == i {
+            if text.count < i {
                 ExamplesOfAI()
             }
             

@@ -36,10 +36,15 @@ import Foundation
             self.addChild(gps)
             self.addChild(car)
             
-            label.position.y = 200
+            let font = #fileLiteral(resourceName: "Tough Love.ttf")
+            CTFontManagerRegisterFontsForURL(font as CFURL, CTFontManagerScope.process, nil)
+            label.fontName = "Tough Love"
+            
+            label.position.y = 230
             label.preferredMaxLayoutWidth = 400
-            label.numberOfLines = 3
-            label.text = "1 - Lorem impusm dolor sit amte, consectur adipiscing elit, sed do eiusmod tempor incidun"
+            label.numberOfLines = 0
+            label.text = "Do you know in wich of these situations Artificial Intelligence can be used?"
+            label.verticalAlignmentMode = .center
             
             self.addChild(label)
             self.addChild(continueBtn)
@@ -58,7 +63,7 @@ import Foundation
             textIndex = 0
             continueBtn.isHidden = false
             var healthText = [
-                "In self care, AI can be a key for early diagnosis of some diseases,...", "...and even discover new medicines"
+                "In health care, AI can be a key for early diagnosis of some diseases,...", "...and even discover new medicines"
             ]
             //isReading = true
             
@@ -69,8 +74,7 @@ import Foundation
             currentText = healthText
             
             continueText()
-            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
-            //textIndex = 1
+            
         }
         
         
@@ -101,8 +105,7 @@ import Foundation
             continueBtn.isHidden = false
             //isReading = true
             var applesText = [
-                "On farms, AI can be used to inspect the fruits health based on its color, size and format", 
-                "It also cans stipulate when the fruit will be ripe, and detect bugs"
+                "On farms, AI can be used to inspect the fruits health, detect bugs, etc"
             ]
             
             
@@ -112,15 +115,13 @@ import Foundation
             currentText = applesText
             
             continueText()
-            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
-            //textIndex = 1
+            
             }
         
         
         func carsAction(){
             textIndex = 0
             
-            //isReading = true
             var carsText = [
             "On the automation, AI can be used in autonomous vehicles"
             ]
@@ -131,8 +132,7 @@ import Foundation
             currentText = carsText
             
             continueText()
-            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
-            //continueBtn.isHidden = false
+            
             textIndex = 1
         }
         

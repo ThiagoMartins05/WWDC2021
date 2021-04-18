@@ -2,7 +2,7 @@
 import PlaygroundSupport
 import SpriteKit
 import Foundation
-
+import AVFoundation
 
 public func Start(){
     class myScene: SKScene{
@@ -22,18 +22,22 @@ public func Start(){
                 self.addText()
             }
             
-            
         }
         
         func addText(){
+            let font = #fileLiteral(resourceName: "Tough Love.ttf")
+            CTFontManagerRegisterFontsForURL(font as CFURL, CTFontManagerScope.process, nil)
+            
             let label = SKLabelNode(fontNamed: "Tough Love")
+            //print(font.absoluteString)
+            //label.fontName = font
             label.fontSize = 50
             label.fontColor = SKColor.cyan
             label.preferredMaxLayoutWidth = 330
             label.numberOfLines = 0
             label.verticalAlignmentMode = .center
             label.horizontalAlignmentMode = .center
-            var texto = "The age of A.I."
+            var texto = "About A.I. ( )"
             self.addChild(label)
             typeText(label: label, text: texto, timeForLetter: 0.15)
         }
@@ -87,6 +91,16 @@ public func Start(){
             node.run(repeatForever)
         }
         
+        
+    }
+    
+    func typeSound(){
+        //let player = try! AVAudioPlayer(data: 
+        
+        let player = try! AVAudioPlayer(contentsOf:#fileLiteral(resourceName: "typeEffect.m4a"))
+        player.numberOfLoops = 1
+        player.averagePower(forChannel: 100)
+        player.play()
         
     }
     

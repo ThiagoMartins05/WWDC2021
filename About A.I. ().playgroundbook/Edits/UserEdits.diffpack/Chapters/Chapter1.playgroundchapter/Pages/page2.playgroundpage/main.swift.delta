@@ -6,13 +6,15 @@
 	<array>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>
+			<string>//Welcome to A.I. labs,
+//On this section, we will understand a little bit about A.I., what is its main objectve and see what we can make using it.
+
 
 AboutAI()
-//ExamplesOfAI()
+
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 29}</string>
+			<string>{1, 161}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

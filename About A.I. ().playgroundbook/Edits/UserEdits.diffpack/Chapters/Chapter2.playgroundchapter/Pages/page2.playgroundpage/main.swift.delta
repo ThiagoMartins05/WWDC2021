@@ -8,13 +8,12 @@
 			<key>ModifiedContent</key>
 			<string>
 DefineCommands()
-
-    //Now that our roubot knows the objects that it must recognize, We have to teach it what to do when it finds a object
-    //You can help him to learn connecting the right objects to the right functions
+//Now that our roubot knows the objects that it must recognize, and what it mustn't,  We need to tell it what to do on each case. 
+//Remember, the main functions that we defined on the last section, and teach the robot by connection the object to what the robot must do when it recognize one of the cases
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 226}</string>
+			<string>{1, 324}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

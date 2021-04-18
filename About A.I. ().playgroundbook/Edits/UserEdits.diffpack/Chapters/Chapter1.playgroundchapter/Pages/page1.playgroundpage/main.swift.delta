@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>//Welcome to (playgroundName)
+			<string>//Welcome to my playground
 
 //The world is envolving faster than we can see.
 
@@ -14,10 +14,11 @@
 
 //I tryed to explain it in a glower way,
 //Hope you enjoy it!
+
 Start()
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 318}</string>
+			<string>{1, 316}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
