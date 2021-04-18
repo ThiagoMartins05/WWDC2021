@@ -6,23 +6,15 @@
 	<array>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>//Welcome to my playground
+			<string>
 
-//The world is envolving faster than we can see.
-
-//For me, one of the most fascinating mechanisms used in the technology field is Artificial Intelligence (AI), that's what we are going to explore in this playground
-
-//I tryed to explain it in a glower way,
-//Hope you enjoy it!
-
-Start()
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 316}</string>
+			<string>{327, 2}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
-			<string>{1, 0}</string>
+			<string>{327, 0}</string>
 		</dict>
 	</array>
 	<key>File</key>

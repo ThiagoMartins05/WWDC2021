@@ -5,8 +5,10 @@
 	<key>Name</key>
 	<string>Cover</string>
 	<key>LiveViewEdgeToEdge</key>
-	<false/>
+	<true/>
 	<key>LiveViewMode</key>
 	<string>VisibleByDefault</string>
+	<key>PlaygroundLoggingMode</key>
+	<string>Off</string>
 </dict>
 </plist>
