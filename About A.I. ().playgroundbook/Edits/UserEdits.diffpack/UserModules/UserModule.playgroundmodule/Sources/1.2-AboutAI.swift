@@ -9,6 +9,8 @@ public func AboutAI(){
         
         var i = 0
         
+        var continueBtn = Button(image: "apple1")
+        
         var firstTime = true
         let robot = SKSpriteNode(imageNamed: "robo_que_fala")
         var label = SKLabelNode()
@@ -81,7 +83,7 @@ public func AboutAI(){
             let acao = { [self] in
                 continueText()
             }
-            let continueBtn = Button(image: "continueBtn", action: acao, X: 130, Y: 125)
+            continueBtn = Button(image: "continueBtn", action: acao, X: 130, Y: 125)
             scene.addChild(continueBtn)
         }
         
@@ -96,7 +98,12 @@ public func AboutAI(){
                 "A.I. can be found in a big range of functions..."]
             
             if text.count > i{
+                continueBtn.isHidden = true
                 typeText(label: label, text: text[i], timeForLetter: 0.1)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + (Double(text[i].count)*0.08)) { [self] in
+                                        continueBtn.isHidden = false
+                                    }
             }
             i += 1
             

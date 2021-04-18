@@ -3,13 +3,17 @@
  
  # Thank You!
  
- This was my submission for WWDC 2021, thanks for your attention!
+ This was my submission for WWDC 2021, thanks for your
+ attention!
  
  
- I love to learn more about the technology Universe. But my greatest
- passion is to use my cretivity to express what I've learned, so that is why I decided to make this Playground.
+ I love to learn more about the technology Universe. But my
+ greatest passion is to use my creativity to express and share
+ with other people what I've learned, so that is why I decided
+ to make this Playground.
  
- I hope you have enjoyed to play this so much as I enjoyed making it ❤️.
+ I hope you have enjoyed to play this so much as I enjoyed
+ making it ❤️.
  
  Sincerely,
  Thiago Martins

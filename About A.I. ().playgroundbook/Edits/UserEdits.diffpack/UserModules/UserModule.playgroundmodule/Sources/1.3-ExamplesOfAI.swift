@@ -63,7 +63,7 @@ import Foundation
             textIndex = 0
             continueBtn.isHidden = false
             var healthText = [
-                "In health care, AI can be a key for early diagnosis of some diseases,...", "...and even discover new medicines"
+                "In health care, A.I. can be a key for early diagnosis of some diseases,...", "...and even discover new medicines"
             ]
             //isReading = true
             
@@ -84,7 +84,7 @@ import Foundation
             continueBtn.isHidden = false
             //isReading = true
             var gpsText = [
-                "On the gps, AI can be used to find the shortest route to your destination"
+                "On the gps, A.I. can be used to find the shortest route to your destination"
                 //"It's also used to find a restaurant next to you, for example"
             ]
             
@@ -105,7 +105,7 @@ import Foundation
             continueBtn.isHidden = false
             //isReading = true
             var applesText = [
-                "On farms, AI can be used to inspect the fruits health, detect bugs, etc"
+                "On farms, A.I. can be used to inspect the fruits health, detect bugs, etc"
             ]
             
             
@@ -123,7 +123,7 @@ import Foundation
             textIndex = 0
             
             var carsText = [
-            "On the automation, AI can be used in autonomous vehicles"
+            "On the automation, A.I. can be used in autonomous vehicles"
             ]
             if firstTime {
                 carsText = FirstTime(text: carsText)
@@ -138,7 +138,7 @@ import Foundation
         
         func FirstTime(text: [String]) -> [String]{
             let text = ["You are right!"] + text + 
-                ["But... Surprise! AI can also be used in the others situations...",
+                ["But... Surprise! A.I. can also be used in the others situations...",
                  "...you can explore it, clicking on different images, or go to the next page"]
             firstTime = false
             return text

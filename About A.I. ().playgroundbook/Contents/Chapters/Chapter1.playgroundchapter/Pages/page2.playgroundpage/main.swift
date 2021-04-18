@@ -2,7 +2,9 @@
 /*:
  # Welcome to A.I. labs,
  
- On this section, we will understand a little bit about A.I. includid what is it, what is it's main objectve and see what we can make using it.
+ On this section, we will understand a little bit about A.I.
+ including what is a Artificial Intelligence, what is it's
+ main objectve and see how it's used nowadays.
  
  
 

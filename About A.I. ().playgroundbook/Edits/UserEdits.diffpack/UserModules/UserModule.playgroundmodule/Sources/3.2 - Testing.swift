@@ -43,6 +43,9 @@ class AITester: SKScene, SKPhysicsContactDelegate{
         self.addChild(tree)
         self.addChild(robot)
         
+        let font = #fileLiteral(resourceName: "Tough Love.ttf")
+        CTFontManagerRegisterFontsForURL(font as CFURL, CTFontManagerScope.process, nil)
+        label.fontName = "Tough Love"
         
         addObjects()
         
@@ -133,12 +136,14 @@ class AITester: SKScene, SKPhysicsContactDelegate{
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [self] in
             
-            let finishButton = Button(image: "finish", action: {goToNextPage()}, X: -95, Y: -100)
+            let finishButton = Button(image: "finish", action: {goToNextPage()}, X: -85, Y: -70)
+            finishButton.alpha = 0
             
             for object in objects{
                 object.run(.fadeOut(withDuration: 2))
             }
             tree.run(.fadeOut(withDuration: 2))
+            finishButton.run(.fadeIn(withDuration: 2.5))
             self.addChild(finishButton)
             
         })
