@@ -13,7 +13,6 @@ import Foundation
         
         let label = SKLabelNode()
         var firstTime = true
-        //var isReading = true
         
         let nextPageBtn = Button(image: "nextPage", Y: -300)
         
@@ -65,7 +64,6 @@ import Foundation
             var healthText = [
                 "In health care, A.I. can be a key for early diagnosis of some diseases,...", "...and even discover new medicines"
             ]
-            //isReading = true
             
             
             if firstTime {
@@ -82,10 +80,8 @@ import Foundation
         func gpsAction(){
             textIndex = 0
             continueBtn.isHidden = false
-            //isReading = true
             var gpsText = [
                 "On the gps, A.I. can be used to find the shortest route to your destination"
-                //"It's also used to find a restaurant next to you, for example"
             ]
             
             
@@ -95,15 +91,12 @@ import Foundation
             currentText = gpsText
             
             continueText()
-            //typeText(label: label, text: currentText[0], timeForLetter: 0.08)
-            //textIndex = 1
         }
         
         
         func applesAction(){
             textIndex = 0
             continueBtn.isHidden = false
-            //isReading = true
             var applesText = [
                 "On farms, A.I. can be used to inspect the fruits health, detect bugs, etc"
             ]
@@ -146,7 +139,6 @@ import Foundation
         
         
         func continueText(){
-            //if isReading{
                 if currentText.count > textIndex{
                     typeText(label: label, text: currentText[textIndex], timeForLetter: 0.08)
                     textIndex += 1
@@ -172,13 +164,10 @@ import Foundation
                 
                 if (currentText.count) == textIndex {
                     textIndex = 0
-                    //isReading = false
                     continueBtn.isHidden = true
                     nextPageBtn.isHidden = false
                 }
             }
-            
-        //}
         
     }
 

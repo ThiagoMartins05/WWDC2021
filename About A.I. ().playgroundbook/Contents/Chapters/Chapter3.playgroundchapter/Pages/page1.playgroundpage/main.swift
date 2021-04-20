@@ -7,7 +7,7 @@
  creating an A.I., let's test the robot that we just created!
 
  We will need get out of our lab, and explore a apple farm,
- because its time to see if the robot that we crated, is
+ because its time to see if the robot that we created, is
  working.
 
 Feel free to use the magnifier on the robot's hand to count

@@ -8,7 +8,6 @@ public func Start(){
     class myScene: SKScene{
         
         let capaInicio = SKSpriteNode(imageNamed: "background-1")
-        //let startButton = SKSpriteNode(imageNamed: "startButton")
         let outerCircle = SKSpriteNode(imageNamed: "outerCircle")
         let innerCircle = SKSpriteNode(imageNamed: "innerCircle")
         
@@ -29,8 +28,6 @@ public func Start(){
             CTFontManagerRegisterFontsForURL(font as CFURL, CTFontManagerScope.process, nil)
             
             let label = SKLabelNode(fontNamed: "Tough Love")
-            //print(font.absoluteString)
-            //label.fontName = font
             label.fontSize = 50
             label.fontColor = SKColor.cyan
             label.preferredMaxLayoutWidth = 330
@@ -95,8 +92,6 @@ public func Start(){
     }
     
     func typeSound(){
-        //let player = try! AVAudioPlayer(data: 
-        
         let player = try! AVAudioPlayer(contentsOf:#fileLiteral(resourceName: "typeEffect.m4a"))
         player.numberOfLoops = 1
         player.averagePower(forChannel: 100)

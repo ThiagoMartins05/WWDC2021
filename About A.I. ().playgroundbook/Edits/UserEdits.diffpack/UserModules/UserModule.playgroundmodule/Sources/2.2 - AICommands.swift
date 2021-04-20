@@ -38,7 +38,7 @@ class commandsScene:SKScene {
         self.addChild(appleFunc)
         
         self.addChild(appleLine)
-        appleLine.strokeColor = .green
+        appleLine.strokeColor = UIColor(red: 0, green: 0.91, blue: 0.51, alpha: 1)
         appleLine.lineWidth = 5
         appleLine.lineCap = .round
         
@@ -46,7 +46,7 @@ class commandsScene:SKScene {
         self.addChild(bugFunc)
         
         self.addChild(bugLine)
-        bugLine.strokeColor = .purple
+        bugLine.strokeColor = UIColor(red: 0.72, green: 0.35, blue: 1, alpha: 1)
         bugLine.lineWidth = 5
         bugLine.lineCap = .round
         
@@ -55,7 +55,7 @@ class commandsScene:SKScene {
         self.addChild(negativeFunc)
         
         self.addChild(negativeLine)
-        negativeLine.strokeColor = .red
+        negativeLine.strokeColor = UIColor(red: 1, green: 0.31, blue: 0.31, alpha: 1)
         negativeLine.lineWidth = 5
         negativeLine.lineCap = .round
         
@@ -117,7 +117,9 @@ class commandsScene:SKScene {
             print(location)
             //AppleFunc
             if location.x > 108 && location.x < 125 && location.y < -113 && location.y > -129{
-                connectedAppleLine = true
+                if moveAppleLine{
+                    connectedAppleLine = true
+                }
             }
             if !connectedAppleLine{
                 appleLine.path = nil
@@ -126,7 +128,9 @@ class commandsScene:SKScene {
             
             //ObjectFunc
             if location.x > 38 && location.x < 52 && location.y < 236 && location.y > 220{
-                connectedBugLine = true
+                if moveBugLine{
+                    connectedBugLine = true
+                }
             }
             if !connectedBugLine{
                 bugLine.path = nil
@@ -134,7 +138,9 @@ class commandsScene:SKScene {
             
             //NegativeFunc
             if location.x > 67 && location.x < 99 && location.y < 70 && location.y > 48{
-                connectedNegativeLine = true
+                if moveNegativeLine{
+                    connectedNegativeLine = true
+                }
             }
             if !connectedNegativeLine{
                 negativeLine.path = nil

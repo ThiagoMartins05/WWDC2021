@@ -5,9 +5,9 @@
 	<key>Name</key>
 	<string>Credits</string>
 	<key>LiveViewEdgeToEdge</key>
-	<true/>
+	<false/>
 	<key>LiveViewMode</key>
-	<string>VisibleByDefault</string>
+	<string>HiddenByDefault</string>
 	<key>PlaygroundLoggingMode</key>
 	<string>Off</string>
 </dict>

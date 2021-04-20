@@ -9,21 +9,19 @@
 			<string>import PlaygroundSupport
 import SpriteKit
 import Foundation
-import AVFoundation
 
 func typeText( label: SKLabelNode, text: String, timeForLetter: Double){
     label.text = ""
-    typeSound()
     var j : Double = 1.0
-    for i in text{
-        DispatchQueue.main.asyncAfter(deadline: .now() + (j*2)/100){
-            //typeSound()
+    DispatchQueue.main.asyncAfter(deadline: .now()){
+        for i in text{
             label.horizontalAlignmentMode = .center
             label.text! += "\(i)"
             RunLoop.current.run(until: Date()+timeForLetter)
             j += 1
         }
     }
+    
 }
 
 func goToNextPage(){
@@ -31,25 +29,9 @@ func goToNextPage(){
 }
 
 
-func typeSound(){
-        do{
-            let typeSound = try! AVAudioPlayer(contentsOf:#fileLiteral(resourceName: "typeEffect.m4a"))
-            typeSound.stop()
-            typeSound.prepareToPlay()
-            typeSound.numberOfLoops = 0
-            typeSound.volume = 1
-            print(typeSound.duration)
-            print(typeSound.averagePower(forChannel: 0))
-            typeSound.play()
-        }catch{
-            print(error)
-        }
-    
-}
-
 </string>
 			<key>ModifiedRange</key>
-			<string>{75, 1047}</string>
+			<string>{75, 521}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>

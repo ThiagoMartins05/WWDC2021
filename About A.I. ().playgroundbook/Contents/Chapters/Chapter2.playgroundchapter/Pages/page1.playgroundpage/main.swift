@@ -6,7 +6,7 @@
  Let's create a robot A.I. based, that helps apple farmers.
  
  
- Its main functions will be count the number of apples in a
+ Its main functions will be to count the number of apples in a
  tree and remove some bugs if necessary...
  
  The firs step to build our A.I. robot is to train it,

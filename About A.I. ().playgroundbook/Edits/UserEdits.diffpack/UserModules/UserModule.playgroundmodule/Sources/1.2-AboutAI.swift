@@ -2,7 +2,7 @@ import PlaygroundSupport
 import SpriteKit
 import Foundation
 
-public func AboutAI(){
+
     
     
     class aboutScene:SKScene{
@@ -60,7 +60,7 @@ public func AboutAI(){
             let font = #fileLiteral(resourceName: "Tough Love.ttf")
             CTFontManagerRegisterFontsForURL(font as CFURL, CTFontManagerScope.process, nil)
             label.fontName = "Tough Love"
-            //let label = SKLabelNode(fontNamed: "Tough Love")
+            
             
             label.verticalAlignmentMode = .center
             label.numberOfLines = 0
@@ -72,7 +72,6 @@ public func AboutAI(){
             self.addChild(label)
             
             continueText()
-            
             
         }
         
@@ -88,23 +87,38 @@ public func AboutAI(){
         }
         
         func continueText(){
-            
-            
-            
+            var duration = 0.0
             let text = [
                 "Artificial intelligence is a branch of computer science that build systems and machines...",
                 "that try to replicate the human intelligence, so it can understand, think and learn...", 
                 "...to make some processes, just like a human does",
                 "A.I. can be found in a big range of functions..."]
             
+            continueBtn.run(.fadeOut(withDuration: 0.5))
+            
             if text.count > i{
-                continueBtn.isHidden = true
-                typeText(label: label, text: text[i], timeForLetter: 0.1)
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + (Double(text[i].count)*0.08)) { [self] in
-                                        continueBtn.isHidden = false
-                                    }
+                typeText(label: label, text: text[i], timeForLetter: 0.08)
+                
+                if i == 0{
+                    duration = 7.5
+                }
+                if i == 1{
+                    duration = 7.0
+                }
+                if i == 2{
+                    duration = 4.3
+                }
+                if i == 3{
+                    duration = 4
+                }
+                
+                continueBtn.run(.sequence([
+                    .wait(forDuration: TimeInterval(duration)),
+                    .fadeIn(withDuration: 0.5)
+                ]))
             }
+            
             i += 1
             
             if text.count < i {
@@ -118,7 +132,7 @@ public func AboutAI(){
     } 
     
     
-    
+public func AboutAI(){
     
     var view = SKView(frame: CGRect(origin: .zero, size: CGSize(width: 518, height: 717)))
     

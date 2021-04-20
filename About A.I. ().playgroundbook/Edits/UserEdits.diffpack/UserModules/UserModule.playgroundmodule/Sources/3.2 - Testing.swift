@@ -157,14 +157,14 @@ class AITester: SKScene, SKPhysicsContactDelegate{
     }
     
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches{
-            let t = touches.randomElement()!
-            let location = touch.location(in: self)
-            let node: SKNode = self.atPoint(location)
-            
-            print(location)
-            
-        }
-}
+//      override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//          for touch in touches{
+//              let t = touches.randomElement()!
+//              let location = touch.location(in: self)
+//              let node: SKNode = self.atPoint(location)
+//              
+//              print(location)
+//              
+//          }
+//  }
 }
